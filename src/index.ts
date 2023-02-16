@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import VueMermaidRender from './components/VueMermaidRender.vue'
+import VueMermaidRender from './VueMermaidRender.vue'
 
 export { VueMermaidRender }
 

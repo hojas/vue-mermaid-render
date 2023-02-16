@@ -2,7 +2,6 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   build: {
     lib: {
@@ -11,7 +10,7 @@ export default defineConfig({
       fileName: 'vue-mermaid-render',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'mermaid'],
       output: {
         globals: {
           vue: 'Vue',

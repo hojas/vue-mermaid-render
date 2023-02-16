@@ -1,6 +1,6 @@
 {
   "name": "vue-mermaid-render",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@7.27.0",
   "license": "MIT",
   "keywords": [
@@ -29,7 +29,7 @@
     "build": "vite build && vue-tsc --declaration --emitDeclarationOnly"
   },
   "dependencies": {
-    "mermaid": "^9.3.0"
+    "mermaid": "^9.4.0"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
@@ -37,8 +37,7 @@
     "prettier": "^2.8.4",
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
-    "vite-plugin-dts": "^1.7.2",
     "vue": "^3.2.47",
-    "vue-tsc": "^1.0.24"
+    "vue-tsc": "^1.1.0"
   }
 }
