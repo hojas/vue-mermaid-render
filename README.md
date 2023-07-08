@@ -1,5 +1,7 @@
 # vue-mermaid-render
 
+![npm](https://img.shields.io/npm/v/vue-mermaid-render) ![downloads](https://img.shields.io/npm/dw/vue-mermaid-render)
+
 Vue 3 component to render diagrams with Mermaid.
 
 ## Install
@@ -11,7 +13,6 @@ $ npm install vue-mermaid-render
 ## Use
 
 ```vue
-
 <script setup lang="ts">
 import { VueMermaidRender } from 'vue-mermaid-render'
 
