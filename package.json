@@ -1,11 +1,47 @@
 {
   "name": "vue-mermaid-render",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@8.6.6",
   "license": "MIT",
+  "repository": "hojas/vue-mermaid-render",
+  "bugs": "https://github.com/hojas/vue-mermaid-render/issues",
+  "keywords": [
+    "vue",
+    "vue-component",
+    "component",
+    "mermaid",
+    "diagrams"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "require": "./dist/vue-mermaid-render.umd.cjs",
+      "import": "./dist/vue-mermaid-render.js"
+    }
+  },
+  "main": "./dist/vue-mermaid-render.umd.cjs",
+  "module": "./dist/vue-mermaid-render.js",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "node ./scripts/dev.cjs",
+    "build": "node ./scripts/build.cjs"
+  },
+  "dependencies": {
+    "mermaid": "^10.2.4"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.7",
-    "eslint": "^8.44.0"
+    "@types/node": "^20.4.1",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.44.0",
+    "shelljs": "^0.8.5",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.2",
+    "vue": "^3.3.4",
+    "vue-tsc": "^1.8.4"
   }
 }

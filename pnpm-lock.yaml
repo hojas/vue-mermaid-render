@@ -7,51 +7,26 @@ settings:
 importers:
 
   .:
-    devDependencies:
-      '@antfu/eslint-config':
-        specifier: ^0.39.7
-        version: 0.39.7(eslint@8.44.0)(typescript@5.1.6)
-      eslint:
-        specifier: ^8.44.0
-        version: 8.44.0
-
-  packages/demo:
-    dependencies:
-      vue:
-        specifier: ^3.3.4
-        version: 3.3.4
-      vue-mermaid-render:
-        specifier: workspace:*
-        version: link:../vue-mermaid-render
-    devDependencies:
-      '@types/node':
-        specifier: ^20.4.1
-        version: 20.4.1
-      '@vitejs/plugin-vue':
-        specifier: ^4.2.3
-        version: 4.2.3(vite@4.4.2)(vue@3.3.4)
-      typescript:
-        specifier: ^5.1.6
-        version: 5.1.6
-      vite:
-        specifier: ^4.4.2
-        version: 4.4.2(@types/node@20.4.1)
-      vue-tsc:
-        specifier: ^1.8.4
-        version: 1.8.4(typescript@5.1.6)
-
-  packages/vue-mermaid-render:
     dependencies:
       mermaid:
         specifier: ^10.2.4
         version: 10.2.4
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: ^0.39.7
+        version: 0.39.7(eslint@8.44.0)(typescript@5.1.6)
       '@types/node':
         specifier: ^20.4.1
         version: 20.4.1
       '@vitejs/plugin-vue':
         specifier: ^4.2.3
         version: 4.2.3(vite@4.4.2)(vue@3.3.4)
+      eslint:
+        specifier: ^8.44.0
+        version: 8.44.0
+      shelljs:
+        specifier: ^0.8.5
+        version: 0.8.5
       typescript:
         specifier: ^5.1.6
         version: 5.1.6
@@ -63,6 +38,56 @@ importers:
         version: 3.3.4
       vue-tsc:
         specifier: ^1.8.4
+        version: 1.8.4(typescript@5.1.6)
+
+  packages/demo:
+    dependencies:
+      vue:
+        specifier: '*'
+        version: 3.3.4
+      vue-mermaid-render:
+        specifier: workspace:*
+        version: link:../..
+    devDependencies:
+      '@types/node':
+        specifier: '*'
+        version: 20.4.1
+      '@vitejs/plugin-vue':
+        specifier: '*'
+        version: 4.2.3(vite@4.4.2)(vue@3.3.4)
+      typescript:
+        specifier: '*'
+        version: 5.1.6
+      vite:
+        specifier: '*'
+        version: 4.4.2(@types/node@20.4.1)
+      vue-tsc:
+        specifier: '*'
+        version: 1.8.4(typescript@5.1.6)
+
+  packages/vue-mermaid-render:
+    dependencies:
+      mermaid:
+        specifier: '*'
+        version: 10.2.4
+    devDependencies:
+      '@types/node':
+        specifier: '*'
+        version: 20.4.1
+      '@vitejs/plugin-vue':
+        specifier: '*'
+        version: 4.2.3(vite@4.4.2)(vue@3.3.4)
+      typescript:
+        specifier: '*'
+        version: 5.1.6
+      vite:
+        specifier: '*'
+        version: 4.4.2(@types/node@20.4.1)
+      vue:
+        specifier: '*'
+        version: 3.3.4
+      vue-tsc:
+        specifier: '*'
         version: 1.8.4(typescript@5.1.6)
 
 packages:
@@ -1555,7 +1580,7 @@ packages:
     dependencies:
       debug: 3.2.7
       is-core-module: 2.12.1
-      resolve: 1.22.2
+      resolve: 1.22.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2231,6 +2256,11 @@ packages:
     resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
     engines: {node: '>=12'}
     dev: false
+
+  /interpret@1.4.0:
+    resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
+    engines: {node: '>= 0.10'}
+    dev: true
 
   /is-alphabetical@1.0.4:
     resolution: {integrity: sha512-DwzsA04LQ10FHTZuL0/grVDk4rFoVH1pjAToYwBrHSxcrBIGQuXrQMtD5U1b0U2XVgKZCTLLP8u2Qxqhy3l2Vg==}
@@ -3022,6 +3052,13 @@ packages:
       type-fest: 0.6.0
     dev: true
 
+  /rechoir@0.6.2:
+    resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
+    engines: {node: '>= 0.10'}
+    dependencies:
+      resolve: 1.22.2
+    dev: true
+
   /regexp-tree@0.1.27:
     resolution: {integrity: sha512-iETxpjK6YoRWJG5o6hXLwvjYAoW+FEZn9os0PD/b6AP6xQwsa/Y7lCVgIixBbUPMfhu+i2LtdeAqVTgGlQarfA==}
     hasBin: true
@@ -3157,6 +3194,16 @@ packages:
   /shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+    dev: true
+
+  /shelljs@0.8.5:
+    resolution: {integrity: sha512-TiwcRcrkhHvbrZbnRcFYMLl30Dfov3HKqzp5tO5b4pt6G/SezKcYhmDg15zXVBswHmctSAQKznqNW2LO5tTDow==}
+    engines: {node: '>=4'}
+    hasBin: true
+    dependencies:
+      glob: 7.2.3
+      interpret: 1.4.0
+      rechoir: 0.6.2
     dev: true
 
   /side-channel@1.0.4:

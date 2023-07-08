@@ -5,8 +5,8 @@ import mermaid from 'mermaid'
 
 const props = defineProps<{ content: string; config?: MermaidConfig }>()
 
-const mounted = ref(false)
 const el = ref()
+const mounted = ref(false)
 const mermaidString = ref('')
 
 function genSvgId() {
