@@ -28,7 +28,8 @@
   ],
   "scripts": {
     "dev": "node ./scripts/dev.cjs",
-    "build": "node ./scripts/build.cjs"
+    "build": "node ./scripts/build.cjs",
+    "lint": "eslint ."
   },
   "dependencies": {
     "mermaid": "^10.2.4"
