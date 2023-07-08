@@ -1,6 +1,6 @@
 # vue-mermaid-render
 
-Vue component to render diagrams with Mermaid.
+Vue 3 component to render diagrams with Mermaid.
 
 ## Install
 
@@ -17,10 +17,10 @@ import { VueMermaidRender } from 'vue-mermaid-render'
 
 const content = `
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
 `
 </script>
 

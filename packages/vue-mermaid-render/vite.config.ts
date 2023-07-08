@@ -1,11 +1,11 @@
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: resolve(__dirname, 'src/main.ts'),
       name: 'VueMermaidRender',
       fileName: 'vue-mermaid-render',
     },
@@ -14,6 +14,7 @@ export default defineConfig({
       output: {
         globals: {
           vue: 'Vue',
+          mermaid: 'mermaid',
         },
       },
     },
