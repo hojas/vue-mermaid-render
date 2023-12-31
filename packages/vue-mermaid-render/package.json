@@ -6,8 +6,8 @@
   "exports": {
     ".": {
       "types": "./dist/main.d.ts",
-      "require": "./dist/vue-mermaid-render.umd.cjs",
-      "import": "./dist/vue-mermaid-render.js"
+      "import": "./dist/vue-mermaid-render.js",
+      "require": "./dist/vue-mermaid-render.umd.cjs"
     }
   },
   "main": "./dist/vue-mermaid-render.umd.cjs",

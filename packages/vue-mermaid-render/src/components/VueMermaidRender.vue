@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { onMounted, ref, watchEffect } from 'vue'
-import type { MermaidConfig } from 'mermaid'
+import { ref, watchEffect } from 'vue'
 import mermaid from 'mermaid'
+import type { MermaidConfig } from 'mermaid'
 
-const props = defineProps<{ content: string; config?: MermaidConfig }>()
+const props = defineProps<{ content: string, config?: MermaidConfig }>()
 
 const el = ref()
-const mounted = ref(false)
 const mermaidString = ref('')
 
 function genSvgId() {
@@ -22,7 +21,7 @@ async function updateGraph(graphDefinition: string) {
 }
 
 watchEffect(() => {
-  if (!mounted.value)
+  if (!el.value)
     return
 
   if (props.config)
@@ -32,15 +31,11 @@ watchEffect(() => {
 })
 
 watchEffect(() => {
-  if (!mounted.value)
+  if (!el.value)
     return
 
   if (props.content)
     updateGraph(props.content)
-})
-
-onMounted(() => {
-  mounted.value = true
 })
 </script>
 
