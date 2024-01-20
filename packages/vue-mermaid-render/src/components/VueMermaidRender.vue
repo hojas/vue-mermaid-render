@@ -3,23 +3,40 @@ import { ref, watchEffect } from 'vue'
 import mermaid from 'mermaid'
 import type { MermaidConfig } from 'mermaid'
 
+/**
+ * props
+ *
+ * @param {string} content - mermaid graph definition
+ * @param {MermaidConfig} config - mermaid config
+ */
 const props = defineProps<{ content: string, config?: MermaidConfig }>()
 
 const el = ref()
 const mermaidString = ref('')
 
+/**
+ * generate svg id
+ */
 function genSvgId() {
-  const min = Math.ceil(1)
-  const max = Math.floor(100000)
-  return `mermaid-svg-${Math.floor(Math.random() * (max - min + 1))}${min}`
+  const max = 1000000
+  return `mermaid-svg-${genId(max)}${genId(max)}`
+
+  function genId(max: number) {
+    return ~~(Math.random() * max)
+  }
 }
 
+/**
+ * update graph
+ * @param graphDefinition - mermaid graph definition
+ */
 async function updateGraph(graphDefinition: string) {
   const id = genSvgId()
   const res = await mermaid.render(id, graphDefinition, el.value)
   mermaidString.value = res.svg
 }
 
+// init mermaid
 watchEffect(() => {
   if (!el.value)
     return
@@ -30,6 +47,7 @@ watchEffect(() => {
     mermaid.initialize({ startOnLoad: false })
 })
 
+// update graph
 watchEffect(() => {
   if (!el.value)
     return
