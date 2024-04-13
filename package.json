@@ -1,7 +1,7 @@
 {
   "name": "vue-mermaid-render",
   "type": "module",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "packageManager": "pnpm@8.15.6",
   "license": "MIT",
   "repository": "hojas/vue-mermaid-render",
