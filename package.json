@@ -2,7 +2,7 @@
   "name": "vue-mermaid-render",
   "type": "module",
   "version": "0.1.3",
-  "packageManager": "pnpm@8.14.1",
+  "packageManager": "pnpm@8.15.6",
   "license": "MIT",
   "repository": "hojas/vue-mermaid-render",
   "bugs": "https://github.com/hojas/vue-mermaid-render/issues",
@@ -28,22 +28,31 @@
   ],
   "scripts": {
     "dev": "node ./scripts/dev.cjs",
+    "dev:vue": "node ./scripts/dev.cjs --demo=vue",
+    "dev:nuxt": "node ./scripts/dev.cjs --demo=nuxt",
     "build": "node ./scripts/build.cjs",
     "lint": "eslint .",
-    "push": "pnpm build && npm publish"
+    "push": "pnpm build && npm publish",
+    "prepare": "husky"
   },
   "dependencies": {
-    "mermaid": "^10.7.0"
+    "mermaid": "^10.9.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.3",
-    "@types/node": "^20.11.5",
-    "@vitejs/plugin-vue": "^5.0.3",
-    "eslint": "^8.56.0",
+    "@antfu/eslint-config": "^2.13.3",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@types/node": "^20.12.7",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "shelljs": "^0.8.5",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.12",
-    "vue": "^3.4.15",
-    "vue-tsc": "^1.8.27"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.8",
+    "vue": "^3.4.21",
+    "vue-tsc": "^2.0.13"
   }
 }
