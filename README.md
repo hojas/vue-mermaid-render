@@ -1,6 +1,6 @@
 # vue-mermaid-render
 
-![npm](https://img.shields.io/npm/v/vue-mermaid-render) ![downloads](https://img.shields.io/npm/dw/vue-mermaid-render)
+![npm](https://img.shields.io/npm/v/vue-mermaid-render) ![downloads](https://img.shields.io/npm/dm/vue-mermaid-render)
 
 Vue 3 component to render diagrams with Mermaid.
 
